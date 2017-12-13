@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Нечіткий калькулятор</title>
+  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" href="../css/zade.css">
+ <!--  <link rel="shortcut icon" href="img/ico.jpg" type="../img/ico.jpg"> -->
+  
+<!--   <script type="text/javascript" src="loader.js"></script> -->
+ 
+
+</head>
+
+
+
+
+
+<body>
+
+
+<div id = "menu">
+  <ul class="nav">
+      <li class="main-menu">
+         <a href = "../index.html">Головна сторінка</a>
+       
+      </li>
+      <li class="settings">
+          <a href>Калькулятор</a>
+      
+          <a href = "Trform1.html">Трикутні нечіткі числа</a>
+          <a href = "Trform1.html">Трацепієвидні нечіткі інтервали</a>
+          <a href = "l-r.html">L-R числа</a>
+          <a href = "#">Задача досягнення нечітко визначеної мети</a>
+     
+      </li>
+      <li class="zadeLi">
+        <a href = "zade.html">Задача досягнення нечітко визначеної мети</a>
+       </li>
+      <li class="link">
+          <a href>Довідка</a>
+          <a href = "Info.html">Загальна інформація</a>
+          <a href = "Manual.html">Як користуватись?</a>
+          <a href = "Usefullink.html">Корисні посилання</a>
+      </li>
+      <li class="search">
+          <a href>Про нас</a>
+          <a href = "Project.html">Про проект</a>
+          <a href = "developers.html">Розробники</a>
+         <!--  <a href>Item 4</a> -->
+      </li>
+</ul>
+</div>
+
+
+
+
+
+
+<div id = "content">
+
+  <div id ="menu1">
+    <ul id ="menuUl">
+      <!-- <li><a href=""><div class = "Lampa1"></div> Задача досягнення нечітко визначеної мети </a></li> -->
+      <!-- <li><a href="dovidka.html"> Довідка </a></li> -->
+    </ul>
+  </div>
+  
+  <div id ="footer">
+    <p align="center">Задача досягнення нечітко визначеної мети</p>
+
+   <!--  <label for="rows">Універсальна множина </label><input type="text" id = "rows" class="red">
+    <label for="columns">Кількцсть нечітких обмежень </label><input type="text" id = "columns" class="red"> -->
+     <label for="columns">Кількість нечітких цілей </label><input type="text" id = "target" class="">
+     <label for="columns">Кількість нечітких обмежень </label><input type="text" id = "limitation" class=""> <br>
+   <!--   <label for="columns">Універсальна множина Х </label><input type="text" id = "rowsX" class=""><input type="text" id = "rowsX" class=""> -->
+    <span class="mnochinaX">Універсальна множина Х</span>
+    <ul id="tree">
+      <li><input type="text" class="redf noSelect" id = firstLi></li>
+      <li><input type="text" class="redf2 noSelect" id = "nextLi"></li>
+    </ul>
+    <i class="fa fa-plus" id = "fontawesome" aria-hidden="true" onclick="AddRowX();"></i>
+
+
+    
+<div class="clearFloat"></div>
+<button onclick="Build();" id = "btn_calc">Побудувати таблицю</button>
+    <hr>
+  </div>
+
+
+<table class="tftable" border="1" id = "tftable"> 
+  <tr id ="header_table"></tr> 
+</table> 
+
+<!-- <i class="fa fa-plus" id = "fontawesome" aria-hidden="true" onclick="AddRow();"></i> -->
+
+
+
+
+<button onclick="Count();" id = "btn_count">Обрахунок</button>
+
+
+
+
+<span id="conclusion"><strong>Висновок:</strong> x <sup>*</sup>= <input id = "conclusion_x" disabled></input> тобто очікуване значення близьке <input id  = "conclusion_x2" disabled> ,при цьому значення функції належності  μD(x) = <input id = conclusion_FN disabled> </input>   </span>
+<br>
+
+<button onclick="relo();">Обнулити дані</button>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../js/main3.js"></script>
+<script src="../js/zade.js"></script>
+
+</body>
+</html>
+
+

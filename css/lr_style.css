@@ -1,0 +1,30 @@
+img.type_lr_img{
+	margin-bottom: 15px;
+}
+input#t1{
+	vertical-align: 21px;
+	margin-right: 15px;
+}
+
+input#t2{
+	vertical-align: 36px;
+	margin-right: 15px;
+}
+
+input#t3{
+	vertical-align: 21px;
+	margin-right: 15px;
+}
+
+input#t4{
+	vertical-align: 30px;
+	margin-right: 15px;
+}
+
+#menu1 #menuUl a{
+	text-align: center;
+}
+
+#add, #vid, #mnoch, #dil, #rmax, #rmin{
+	display: inline-block;
+}

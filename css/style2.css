@@ -1,0 +1,98 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+#content{
+	max-width:1100px;
+	min-width:1100px;
+	width:100%;
+	/* height:1250px; */
+	height:2300px;
+	border:1px solid #696969;
+	margin:0 auto;
+	position:relative;
+
+}
+
+#footer{
+	font-size:30px;
+	font-family:Comic SANS MS;
+}
+#add{
+	position:absolute;
+	width:100%;
+	height:1263px;
+/* 	border:1px solid red; */
+	margin:2px;
+}
+
+#vvod_ch{
+	width:100%;
+	height:120px;
+/* 	border:1px solid green; */
+}
+
+#pred_vivod, #Rmax_vivod, #Rmin_vivod,#dil_vivod, #add_vivod, #vid_vivod, #Mno_vivod, #Dil_vivod{
+	width:95%;
+	height:250px;
+	/* border:1px solid yellow; */
+}
+
+#summ{
+	height:30px;
+	width:200px;
+}
+
+
+#menu{
+	margin:0 auto;
+	width:100%;
+	height:43px;
+	background:#696969;
+}
+
+#menuUl{
+	margin:0 auto;
+	width:900px;
+}
+
+#menu li{
+	list-style:none;
+	float:left;
+	width:300px;
+}
+
+#menu a{
+	text-decoration:none;
+	background:	#696969;
+	color:white;
+	padding:10px;
+	display:block;
+	text-align:center;
+	font-size:20px;
+}
+
+#menu a:hover{
+	background:#9C9C9C;
+}
+
+
+#niz{
+	border:1px solid #696969;
+	width:100%;
+	height:200px;
+	background:	#696969;
+	position:absolute;
+	top:100%;
+	left:-1px;
+	color:white;
+}
+
+#parava{
+	font-size:20px;
+	width:300px;
+	height:30px;
+	margin:0 auto;
+	margin-top:15%;
+}

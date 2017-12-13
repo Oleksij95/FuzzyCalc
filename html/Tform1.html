@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Нечіткий калькулятор</title>
+	<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="..//style.css">
+	<link rel="shortcut icon" href="img/ico.jpg" type="..//img/ico.jpg">
+	<script type="text/javascript" src="loader.js"></script>
+  <script language="javascript" type="text/javascript" src="..//flot/jquery.js"></script>
+  <script language="javascript" type="text/javascript" src="..//flot/jquery.flot.js"></script>
+</head>
+
+<body>
+
+
+<div id = "menu">
+<ul class="nav">
+    <li class="main-menu">
+        <a href = "../index.html">Головна сторінка</a>
+     
+    </li>
+    <li class="settings">
+        <a href>Калькулятор</a>
+    
+        <a href = "Trform1.html">Трикутні нечіткі числа</a>
+        <a href = "Tform1.html">Трацепієвидні нечіткі інтервали</a>
+        <a href = "l-r.html">L-R числа</a>
+        <a href = "zade.html">Задача досягнення нечітко визначеної мети</a>
+   
+    </li>
+     <li class="zadeLi">
+			 	<a href = "zade.html">Задача досягнення нечітко визначеної мети</a>
+			 </li>
+    <li class="link">
+        <a href>Довідка</a>
+        <a href = "Info.html">Загальна інформація</a>
+        <a href = "Manual.html">Як користуватись?</a>
+        <a href = "Usefullink.html">Корисні посилання</a>
+    </li>
+    <li class="search">
+        <a href>Про нас</a>
+        <a href = "Project.html">Про проект</a>
+        <a href = "developers.html">Розробники</a>
+       <!--  <a href>Item 4</a> -->
+    </li>
+</ul>
+</div>
+
+
+<div id = "content">
+
+	<div id ="menu1">
+		<ul id ="menuUl">
+			<li><a href=""><div class = "Lampa1"></div> Форма 1</a></li>
+			<li><a href="Tform2.html"><div class = "Lampa2"></div> Форма 2</a></li>
+		<!-- 	<li><a href="dovidka.html"> Довідка </a></li> -->
+		</ul>
+	</div>
+	
+	<div id ="footer">
+	
+		<p align="center">Операції над трапецієвидними нечіткими інтервалами</p>
+	</div>
+	<div id ="OSNvvod">
+	
+		Загальний вигляд числа <sub><img src="..//img/ch3.png" height = "20px"></img></sub>
+		<br>
+		<br>
+			
+			<input type="radio" id = "UnarOper" name="Operations" value="" onclick="SOperations();"> Унарні операції
+			<input type="radio" id = "BinarOper" name="Operations" value="" onclick="SOperations();"> Бінарні операції
+			<input type="radio" id = "OllOper" name="Operations" value="" onclick="SOperations();"> Всі операції
+			<br>
+			<br>
+			<div class="unnrOp" >
+				<input type="checkbox" name="" value="" onclick="operation();" class="UnarOppr1" id = "UnOber"> <span id = "SelectOber">Обернення</span>
+				<input type="checkbox" name="" value="" onclick="operation();" class="UnarOppr1" id = "UnProt"> <span id = "SelectProt">Знаходження протилежного</span>
+			</div>
+			<div class="BinOp">
+				<input type="checkbox" name="" value="" onclick="operationB();" class="BinOppr1" id = "BinAdd"> <span>Додавання</span>
+				<input type="checkbox" name="" value="" onclick="operationB();" class="BinOppr1" id = "BinVid"> <span>Віднімання</span>
+				<input type="checkbox" name="" value="" onclick="operationB();" class="BinOppr1" id = "BinMno"> <span>Множення</span>
+				<input type="checkbox" name="" value="" onclick="operationB();" class="BinOppr1" id = "BinDil"> <span>Ділення</span>
+				<input type="checkbox" name="" value="" onclick="operationB();" class="BinOppr1" id = "BinMax"> <span>Операція розширеного максимуму</span>
+				<input type="checkbox" name="" value="" onclick="operationB();" class="BinOppr1" id = "BinMin"> <span>Операція розширеного мінімуму</span>
+			</div>
+			<br>
+
+			<br>
+			<div class="SelectOperations">
+
+				<label for ="cp1_1">Число А </label><input type="text" id = "ср1_1" size="3"></input>
+				<input type="text" id = "ср1_2" size="3"></input>
+				<input type="text" id = "ср1_3" size="3"></input>
+				<input type="text" id = "ср1_4" size="3"></input>
+			
+			
+				<label for ="cp2_1"><span id = "sSelect">Число B </span></label><input type="text" id = "ср2_1" size="3"></input>
+				<input type="text" id = "ср2_2" size="3"></input>
+				<input type="text" id = "ср2_3" size="3"></input>
+				<input type="text" id = "ср2_4" size="3"></input>
+					
+			</div>
+
+	</div>
+		<br>
+		<hr>
+		<br>
+	<div id = "add">
+		<p align="center">Додавання</p>
+		<div id = "add_vvod">
+		
+				<div id = "Knopka_summ">
+					<!-- <input type="button" id = "summ" onclick="summC();" value="Здійснити операцію додавання"></input> -->
+						Графіки для відображення:
+						<input id="AddCh1" type="checkbox" value="A(x)" onclick="summC();"> μA(x)
+						<input id="AddCh2" type="checkbox" value="A(x)" onclick="summC();"> μB(x)
+						<input id="AddCh3" type="checkbox" value="A(x)" onclick="summC();"> μC(x)
+				</div>
+		</div>
+		
+				<div id = "summ_vivod">
+					<output id = "vivod_ch1" ></output>
+					
+				</div>
+				<div id ="summD">
+			
+	
+				</div>
+				
+					
+	</div>
+
+	
+	<div id = "vid">
+		<p align="center">Віднімання</p>
+		
+		<div id = "vid_vvod">
+		
+				<div id = "Knopka_vid">
+				<!-- 	<input type="button" id = "vidnim" onclick="vidC();" value="Здійснити операцію віднімання"></input> -->
+						Графіки для відображення:
+						<input id="VidCh1" type="checkbox" value="A(x)" onclick="vidC();"> μA(x)
+						<input id="VidCh2" type="checkbox" value="A(x)" onclick="vidC();"> μB(x)
+						<input id="VidCh3" type="checkbox" value="A(x)" onclick="vidC();"> μC(x)
+				</div>
+		</div>
+		
+				<div id = "vid_vivod">
+					<output id = "Vidvivod_ch1" size="3"></output>
+				</div>
+					
+		<div id ="VidD"></div>
+	</div>
+	
+		
+	<div id = "mnoch">
+		<p align="center">Множення</p>
+		
+		<div id = "mno_vvod">
+		
+				<div id = "Knopka_mno">
+					<!-- <input type="button" id = "Mnoche" onclick="mnoC();" value="Здійснити операцію множення"></input> -->
+						Графіки для відображення:
+						<input id="MnoCh1" type="checkbox" value="A(x)" onclick="mnoC();"> μA(x)
+						<input id="MnoCh2" type="checkbox" value="A(x)" onclick="mnoC();"> μB(x)
+						<input id="MnoCh3" type="checkbox" value="A(x)" onclick="mnoC();"> μC(x)
+				</div>
+		</div>
+		
+				<div id = "mno_vivod">
+					<output id = "Mnovivod_ch1" size="3"></output>
+				</div>
+		
+		<div id ="MnoC"></div>
+	</div>
+
+		
+	<div id = "dil">
+		<p align="center">Ділення</p>
+		
+		<div id = "dil_vvod">
+						<div id = "Knopka_dil">
+					<!-- <input type="button" id = "vidnim" onclick="dilC();" value="Здійснити операцію ділення"></input> -->
+						Графіки для відображення:
+						<input id="DilCh1" type="checkbox" value="A(x)" onclick="dilC();"> μA(x)
+						<input id="DilCh2" type="checkbox" value="A(x)" onclick="dilC();"> μB(x)
+						<input id="DilCh3" type="checkbox" value="A(x)" onclick="dilC();"> μC(x)
+				</div>
+		</div>
+		
+				<div id = "dil_vivod">
+					<output id = "Dilvivod_ch1" size="3"></output>
+				</div>
+		
+		<div id ="dilD"></div>
+	</div>
+	
+	
+		<div id = "rmax">
+		<p align="center">Операція розширеного максимуму</p>
+		
+		<div id = "rmax_vvod">
+		
+				<div id = "Knopka_rmax">
+					<!-- <input type="button" id = "maximym" onclick="RmaxF();" value="Операція розширеного максимуму"></input> -->
+						Графіки для відображення:
+						<input id="RmxCh1" type="checkbox" value="A(x)" onclick="RmaxF();"> μA(x)
+						<input id="RmxCh2" type="checkbox" value="A(x)" onclick="RmaxF();"> μB(x)
+						<input id="RmxCh3" type="checkbox" value="A(x)" onclick="RmaxF();"> μC(x)
+				</div>
+		</div>
+				<div id = "rmax_vivod">
+					<output id = "rmax_ch1" size="3"></output>
+				</div>
+		
+		<div id ="MaxD"></div>
+	</div>
+	
+	
+		<div id = "rmin">
+		<p align="center">Операція розширеного мінімуму</p>
+		
+		<div id = "rmin_vvod">
+		
+				<div id = "Knopka_rmin">
+		<!-- 			<input type="button" id = "minimym" onclick="RminF();" value="Операція розширеного мінімуму"></input> -->
+					Графіки для відображення:
+					<input id="RmiCh1" type="checkbox" value="A(x)" onclick="RminF();"> μA(x)
+					<input id="RmiCh2" type="checkbox" value="A(x)" onclick="RminF();"> μB(x)
+					<input id="RmiCh3" type="checkbox" value="A(x)" onclick="RminF();"> μC(x)
+				</div>
+		</div>
+		
+				<div id = "rmin_vivod">
+					<output id = "rmin_ch1" size="3"></output>
+				</div>
+		
+		<div id ="MinD"></div>
+	</div>
+
+	
+	<div id = "ober">
+		<p align="center">Оберненя</p>
+		
+		<div id = "ober_vvod">
+		
+				<div id = "Knopka_ober">
+					<!-- <input type="button" id = "Obernennya" onclick="OBRC();" value="Здійснити операцію обернення"></input> -->
+					Графіки для відображення:
+					<input id="ObrCh1" type="checkbox" value="A(x)" onclick="OBRC();"> μA(x)
+					<input id="ObrCh3" type="checkbox" value="A(x)" onclick="OBRC();"> μC(x)
+				</div>
+		</div>
+		
+				<div id = "OBR_vivod">
+					<output id = "Obervivod_ch1" size="3"></output>
+				</div>
+		
+		<div id ="Obern"></div>
+	</div>
+
+		<div id = "prot">
+		<p align="center">Операція знаходження протилежного</p>
+		
+		<div id = "prot_vvod">
+		
+				<div id = "Knopka_prot">
+					<!-- <input type="button" id = "PProt" onclick="protF();" value="Здійснити операцію обернення"></input> -->
+					Графіки для відображення:
+					<input id="PrtCh1" type="checkbox" value="A(x)" onclick="protF();"> μA(x)
+					<input id="PrtCh3" type="checkbox" value="A(x)" onclick="protF();"> μC(x)
+				</div>
+		</div>
+		
+				<div id = "prot_vivod">
+					<output id = "protvivod_ch1" size="3"></output>
+				</div>
+		
+		<div id ="Protil"></div>
+	</div>
+	
+	<div id ="niz">
+		<div id = "parava"><p align="center"> Всі права захищено</p>
+		</div>
+	</div>
+	
+</div>
+
+<script src="..//js/main2.js"></script>
+</body>
+</html>
